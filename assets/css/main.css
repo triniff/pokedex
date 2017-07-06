@@ -1,0 +1,19 @@
+body{
+	margin: 0;
+	padding: 50px;
+}
+
+.btn-poke{
+	background-color: #ef5350;
+	color: #fff;
+	border: none;
+	padding: 7px 15px;
+}
+.btn-poke:hover{
+	background-color: #C62828;
+	color: #fff;
+}
+.header h1{
+	margin-bottom: 40px;
+	color: #ef5350;
+}
