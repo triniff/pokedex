@@ -35,3 +35,12 @@ body{
 .btn-see-more{
 	background-color: transparent;
 }
+
+
+/*TIPOS*/
+.planta{
+	color: green;
+}
+.veneno{
+	color: pink;
+}
