@@ -1,7 +1,30 @@
 $(document).ready(function(){
    var pokeDescp = function(data){
         console.log(data);
-        console.log(data.height);
+        var height = data.height;
+        var pokeID = data.id;
+        var pokeName = data.name;
+        var weight = data.weight;
+        var imgPoke = data.sprites.front_default;
+        var stats = data.stats;
+        var pType = data.types.length;
+
+        console.log(imgPoke);
+        console.log("Nombre: ", pokeName);
+        console.log("id: ", pokeID);
+        console.log("Peso: ", weight);
+        console.log("Altura: ", height);
+
+        if (pType == 2) {
+            console.log("Tipo:", data.types[1].type.name);
+            console.log("Tipo:", data.types[0].type.name);
+        }else{
+            console.log("Tipo:", data.types[0].type.name);
+        }
+        
+        stats.forEach(function(s){
+            console.log(s.stat.name + ":" + s.base_stat);
+        })
    }
 
    var poke = function(data){
