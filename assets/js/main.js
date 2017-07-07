@@ -18,14 +18,19 @@ $(document).ready(function(){
         console.log("Peso: ", weight);
         console.log("Altura: ", height);
 
-        if (pType == 2) {
+        /*if (pType == 2) {
             var type1 = data.types[0].type.name;
             var type2 = data.types[1].type.name;
             console.log("Tipo:", type2);
             console.log("Tipo:", type1);
         }else{
             console.log("Tipo:", type1);
-        }
+        }*/
+
+        var type1 = data.types[0].type.name;
+            var type2 = data.types[1].type.name;
+            console.log("Tipo:", type2);
+            console.log("Tipo:", type1);
         
         var status = "";
         stats.forEach(function(s){
@@ -45,13 +50,35 @@ $(document).ready(function(){
             $(".tipo1").addClass('veneno');
         }*/
         switch (type1) {
-            case "poison": $(".tipo1").addClass('veneno');
-            case "grass": $(".tipo1").addClass('planta');
+            case "normal": $(".tipo1").addClass('normal');
+                break;
+            case "grass": $(".tipo1").addClass('grass');
+                break;
+            case "poison": $(".tipo1").addClass('poison');
+                break;
+            case "pyschic": $(".tipo1").addClass('pyschic');
+                break;
+            case "fire": $(".tipo1").addClass('fire');
+                break;
+            case "dragon": $(".tipo1").addClass('dragon');
+                break;
+            case "flying": $(".tipo1").addClass('flying');
 
         }
         switch (type2) {
-            case "poison": $(".tipo2").addClass('veneno');
-            case "grass": $(".tipo2").addClass('planta');
+             case "normal": $(".tipo2").addClass('normal');
+                break;
+            case "grass": $(".tipo2").addClass('grass');
+                break;
+            case "poison": $(".tipo2").addClass('poison');
+                break;
+            case "pyschic": $(".tipo2").addClass('pyschic');
+                break;
+            case "fire": $(".tipo2").addClass('fire');
+                break;
+            case "dragon": $(".tipo2").addClass('dragon');
+                break;
+            case "flying": $(".tipo2").addClass('flying');
 
         }
 
@@ -88,7 +115,7 @@ $(document).ready(function(){
         })
     }
 	$.ajax({
-            url: 'http://pokeapi.co/api/v2/pokemon/?limit=1',
+            url: 'http://pokeapi.co/api/v2/pokemon/?limit=20', /*151 primera generacion*/
             type: 'GET',
             datatype: 'JSON',
             
