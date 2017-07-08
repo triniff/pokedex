@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	color: #6B6B69;
 }
 
 .btn-poke{
@@ -28,67 +29,92 @@ body{
 }
 .modal-footer span{
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	font-size: 40px;
+	top: -130px;
+    right: -280px;
+    font-size: 40px;
 }
+.modal-content {
+   padding: 10px 40px;
+   height: 80vh;
+}
+
 .btn-see-more{
 	background-color: transparent;
+	padding: 20px;
+	color: #6B6B69;
 }
 
-
+.description{
+	display: inline-block;
+	margin: 10px;
+}
+.description h3{
+	font-size: 15px;
+}
+.status{
+	text-align: left;
+}
+.status div h6, .status div p{
+	display: inline-block;
+}
+.tipo1, .tipo2{
+	margin-right: 10px;
+	padding: 2px 8px;
+	border-radius: 10px;
+	color: #fff;
+}
 /*TIPOS*/
 .normal{
-	color: #a8a878;
+	background-color: #a8a878;
 }
 .grass{
-	color: #78c850;
+	background-color: #78c850;
 }
 .poison{
-	color: #a040a0;
+	background-color: #a040a0;
 }
 .pyschic{
-	color: #f85888;
+	background-color: #f85888;
 }
 .ground{
-	color: #e0c068;
+	background-color: #e0c068;
 }
 .ice{
-	color: #98d8d8;
+	background-color: #98d8d8;
 }
 .fire{
-	color: #f08030;
+	background-color: #f08030;
 }
 .rock{
-	color: #b8a038;
+	background-color: #b8a038;
 }
 .dragon{
-	color: #7038f8;
+	background-color: #7038f8;
 }
 .water{
-	color: #6890f0;
+	background-color: #6890f0;
 }
 .bug{
-	color: #a8b820;
+	background-color: #a8b820;
 }
 .dark{
-	color: #705848;
+	background-color: #705848;
 }
 .fighting{
-	color: #c03028;
+	background-color: #c03028;
 }
 .ghost{
-	color: #705898;
+	background-color: #705898;
 }
 .steel{
-	color: #b8b8d0;
+	background-color: #b8b8d0;
 }
 .flying{
-	color: #a890f0;
+	background-color: #a890f0;
 }
 .electric{
-	color: #f8d030;
+	background-color: #f8d030;
 }
 .fairy{
-	color: #ee99ac;
+	background-color: #ee99ac;
 }

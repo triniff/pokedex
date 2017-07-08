@@ -34,7 +34,7 @@ $(document).ready(function(){
         
         var status = "";
         stats.forEach(function(s){
-            status += "<h3>" + s.stat.name + ":" + "</h3>" + "<p>" + s.base_stat + "</p>";
+            status += "<div><h5>" + s.stat.name + ": " + s.base_stat + "</h5><div>";
         })
 
         
@@ -42,8 +42,8 @@ $(document).ready(function(){
 
         //CREANDO MODAL
         var modalHeader = "<div class='modal-header text-center'> <h4 class='modal-title donation' id='myModalLabel-poke'>"+  imgPoke + pokeName + "</h4></div>";
-        var modalFooter = "<div class='modal-footer row'><div class='col-md-12 col-lg-12'><div class='description'><h3>Weight: </h3><p> " + weight + "</p><h3>Height: </h3><p>" + height + "</p></div><div class='status'>" + status + "</div> <div class='tipo'><h3>Tipo: </h3><p class='tipo1'>" + type1 + "</p><p class='tipo2'>" + type2 + "</p></div></div> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span></button> </div>";
-        $(".all-poke").append("<div class='poke col-md-2 col-lg-2'> <button type='button' class='btn btn-see-more' data-toggle='modal' data-target='#poke" + pokeID + "'>" + imgPoke + "</button> <div class='modal fade' id='poke"+ pokeID + "'><div class='modal-dialog' role='document'> <div class='modal-content'>" + modalHeader + modalFooter +"</div></div>")   
+        var modalFooter = "<div class='modal-footer row'><div class='col-md-12 col-lg-12'><div class='row'><div class='description'><h3>Weight: " + weight + "</h3></div><div class='description'><h3>Height: " + height + "</h3></div><div class='status col-md-6 col-lg-6'> <h2>Stats</h2>" +  status + "</div> <div class='tipo'><h3>Tipo: </h3><p class='tipo1'>" + type1 + "</p><p class='tipo2'>" + type2 + "</p></div></div></div> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span></button> </div>";
+        $(".all-poke").append("<div class='poke col-md-2 col-lg-2'> <button type='button' class='btn btn-see-more' data-toggle='modal' data-target='#poke" + pokeID + "'>" + imgPoke + "<p>" + pokeName + "</p></button> <div class='modal fade' id='poke"+ pokeID + "'><div class='modal-dialog' role='document'> <div class='modal-content'>" + modalHeader + modalFooter +"</div></div>")   
         
         //ESTILOS SEGUN TIPO
         /*if (type1 == "poison") {
@@ -114,8 +114,8 @@ $(document).ready(function(){
 
         })
     }
-	$.ajax({
-            url: 'http://pokeapi.co/api/v2/pokemon/?limit=20', /*151 primera generacion*/
+    $.ajax({
+            url: 'http://pokeapi.co/api/v2/pokemon/?limit=2', /*151 primera generacion*/
             type: 'GET',
             datatype: 'JSON',
             
@@ -128,7 +128,7 @@ $(document).ready(function(){
         })
     
     /*function impirmirPokemon(){
-    	
+        
                 var pokeURL = "http://pokeapi.co/api/v1/pokemon/" + param;
             
                 $.getJSON(pokeURL, function(data){
@@ -152,7 +152,6 @@ $(document).ready(function(){
                             var pokeType2 = data.types[1].name;
                         }
                         else var pokeType2 = null;
-
                         console.log("Number: ", pokeID);
                         console.log("Name: ", pokeName);
                         console.log("weight: ", weight);
@@ -169,14 +168,11 @@ $(document).ready(function(){
                         var modalHeader = "<div class='modal-header text-center'> <h4 class='modal-title donation' id='myModalLabel-poke'>"+ pokeName + "</h4></div>";
                         var modalFooter = "<div class='modal-footer row'>" + "<div class='col-md-6 col-lg-6'>" +  imgPoke + "</div><div class='col-md-6 col-lg-6'><p>" + description + "</p></div> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span></button> </div>";
                         $(".all-poke").append("<div class='poke col-md-2 col-lg-2'> <button type='button' class='btn btn-see-more' data-toggle='modal' data-target='#poke" + pokeID + "'>" + imgPoke + "</button> <div class='modal fade' id='poke"+ pokeID + "'><div class='modal-dialog' role='document'> <div class='modal-content'>" + modalHeader + modalFooter +"</div></div>")   
-
                     });    
-
                   
                 });
-
             }
-    }impirmirPokemon()	
+    }impirmirPokemon()  
 */
 
 })
