@@ -163,7 +163,7 @@ $(document).ready(function(){
         })
     }
     $.ajax({
-            url: 'http://pokeapi.co/api/v2/pokemon/?limit=6', /*151 primera generacion*/
+            url: 'http://pokeapi.co/api/v2/pokemon/?limit=151', /*151 primera generacion*/
             type: 'GET',
             datatype: 'JSON',
             
