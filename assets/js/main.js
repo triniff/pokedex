@@ -49,7 +49,8 @@ $(document).ready(function(){
         /*if (type1 == "poison") {
             $(".tipo1").addClass('veneno');
         }*/
-        switch (type1) {
+        
+   switch (type1) {
             case "normal": $(".tipo1").addClass('normal');
                 break;
             case "grass": $(".tipo1").addClass('grass');
@@ -58,15 +59,38 @@ $(document).ready(function(){
                 break;
             case "pyschic": $(".tipo1").addClass('pyschic');
                 break;
+            case "ground": $(".tipo1").addClass('ground');
+                break;
+            case "ice": $(".tipo1").addClass('ice');
+                break;
             case "fire": $(".tipo1").addClass('fire');
+                break;
+            case "rock": $(".tipo1").addClass('rock');
                 break;
             case "dragon": $(".tipo1").addClass('dragon');
                 break;
+            case "water": $(".tipo1").addClass('water');
+                break;
+            case "bug": $(".tipo1").addClass('bug');
+                break;
+            case "dark": $(".tipo1").addClass('dark');
+                break;
+            case "fighting": $(".tipo1").addClass('fighting');
+                break;
+            case "ghost": $(".tipo1").addClass('ghost');
+                break;
+            case "steel": $(".tipo1").addClass('steel');
+                break;
             case "flying": $(".tipo1").addClass('flying');
+                break;
+            case "electric": $(".tipo1").addClass('electric');
+                break;
+            case "fairy": $(".tipo1").addClass('fairy');
+                break;
 
         }
         switch (type2) {
-             case "normal": $(".tipo2").addClass('normal');
+            case "normal": $(".tipo2").addClass('normal');
                 break;
             case "grass": $(".tipo2").addClass('grass');
                 break;
@@ -74,13 +98,37 @@ $(document).ready(function(){
                 break;
             case "pyschic": $(".tipo2").addClass('pyschic');
                 break;
+            case "ground": $(".tipo2").addClass('ground');
+                break;
+            case "ice": $(".tipo2").addClass('ice');
+                break;
             case "fire": $(".tipo2").addClass('fire');
+                break;
+            case "rock": $(".tipo2").addClass('rock');
                 break;
             case "dragon": $(".tipo2").addClass('dragon');
                 break;
+            case "water": $(".tipo2").addClass('water');
+                break;
+            case "bug": $(".tipo2").addClass('bug');
+                break;
+            case "dark": $(".tipo2").addClass('dark');
+                break;
+            case "fighting": $(".tipo2").addClass('fighting');
+                break;
+            case "ghost": $(".tipo2").addClass('ghost');
+                break;
+            case "steel": $(".tipo2").addClass('steel');
+                break;
             case "flying": $(".tipo2").addClass('flying');
+                break;
+            case "electric": $(".tipo2").addClass('electric');
+                break;
+            case "fairy": $(".tipo2").addClass('fairy');
+                break;
 
         }
+
 
    }
 
@@ -115,7 +163,7 @@ $(document).ready(function(){
         })
     }
     $.ajax({
-            url: 'http://pokeapi.co/api/v2/pokemon/?limit=2', /*151 primera generacion*/
+            url: 'http://pokeapi.co/api/v2/pokemon/?limit=6', /*151 primera generacion*/
             type: 'GET',
             datatype: 'JSON',
             
@@ -177,3 +225,4 @@ $(document).ready(function(){
 
 })
  
+
